@@ -183,7 +183,7 @@ Generally speaking, a component is a re-usable piece of code that addresses a sp
 
 Angular 2 leans heavily into component structure. Everything is a component.
 
-![Component Tree](https://angular.io/resources/images/devguide/router/component-tree.png)
+![Component Tree](https://i.stack.imgur.com/sV364.png)
 
 What does an Angular 2 component look like though?
 
@@ -213,7 +213,7 @@ With **app.component.html**, we see our first Angular 2 template.
 
 As you can see, Angular uses the same double bracket binding syntax as Ember.
 
-The beating heart of our component exists in **app.component.ts**.
+The beating heart of our component exists in **app.component.ts**. 
 
 ```typescript
 @Component({
@@ -239,6 +239,10 @@ That's our component!
 The next two properties of our component decorator argument are relative paths to the template and the stylesheet for the component.
 
 These metadata properties are added to our component class at runtime. For a full list of metadata properties that our component decorator recognizes, [check out the documentation](https://angular.io/docs/ts/latest/api/core/index/Component-decorator.html).
+
+In the class itself, we see one property being set. The scope of an instance of this class will serve as the view model for our component. That 'title' we saw earlier in the template will be bound to the value of our instance's 'title' property.
+
+![Angular 2 Components](https://angular.io/resources/images/devguide/architecture/component-databinding.png)
 
 Finally, using another decorator, our app component is neatly package up to be bootstrapped in **app.module.ts**.
 
@@ -317,7 +321,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./masterSword.component.css']
 })
 export class MasterSwordComponent {
-  title = 'Behold the Master Sword!';
+  proclamation = 'Behold the Master Sword!';
 }
 ```
 
@@ -349,7 +353,6 @@ export class AppModule { }
 ```
 
 And use it!
-
 
 -   [Angular-cli github page](https://github.com/angular/angular-cli)
 -   [Official Angular Documentation](https://github.com/angular/angular-cli)
