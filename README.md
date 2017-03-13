@@ -197,7 +197,7 @@ Our 'app' component is composed of five files:
 └── app.module.ts
 ```
 
-The Angular 2 dev team wants **all of our components to be a subset of this structure**. Ubiquity is the name of the game.
+Besides the module file, which can be unique to the root component, the Angular 2 dev team wants **all of our components to be a subset of this structure**. Ubiquity is the name of the game.
 
 In **app.component.css**, we will put all of the styles that pertain to our component. These styles **are scope exclusively to their component.** Sick of namespacing your styles to avoid collisions? Angular 2 has you covered.
 
@@ -279,7 +279,77 @@ Finally, list our root component to be bootstrapped in **main.ts**.
 
 Let's work together to add a second component, MasterSword, to our fledgling app.
 
-## Additional Resources
+First, we create a folder for the new component inside of our app folder:
+
+```bash
+mkdir masterSword
+```
+
+Next, we want to create files for our component that follow the naming conventions of our previous component:
+
+```bash
+touch {componentName}.component.{ ts|html|css|spec.ts }
+```
+
+Let's give our template some flavor:
+
+```html
+<h1>{{proclamation}}</h1>
+<img src="http://vignette1.wikia.nocookie.net/zelda/images/f/fa/Master_Sword_Artwork_(Skyward_Sword).png/revision/latest">
+```
+
+Make our stylesheet impicitly-scoped and spicy:
+
+```css
+h1 {
+  background-color: red;
+}
+```
+
+And create a component serve as the view model:
+
+```typescript
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'master-sword',
+  templateUrl: './masterSword.component.html',
+  styleUrls: ['./masterSword.component.css']
+})
+export class MasterSwordComponent {
+  title = 'Behold the Master Sword!';
+}
+```
+
+With our silly little component fleshed out, all that's left to do is import and declare it in our app module:
+
+```typescript
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+
+import { AppComponent } from './app.component';
+**import { MasterSwordComponent } from './masterSword/masterSword.component';**
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    **MasterSwordComponent**
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+
+And use it!
+
 
 -   [Angular-cli github page](https://github.com/angular/angular-cli)
 -   [Official Angular Documentation](https://github.com/angular/angular-cli)
