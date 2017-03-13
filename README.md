@@ -14,15 +14,10 @@
 
 By the end of this, developers should be able to:
 
--   Explain what Angular 2 is and what kinds of applications it's used for.
--   Download and install `ng-cli` and its dependencies.
+-   Explain what Angular 2 is and how it differs from Ember
+-   Download and install `ng-cli` and scaffold a new ng2 app
 -   Describe what a component is and why they are useful
--   Contrast the layers of Ember 1 and Ember 2 applications.
-
-## Preparation
-
-1.  [Fork and clone](https://github.com/ga-wdi-boston/meta/wiki/ForkAndClone)
-    this repository.
+-   Provide a broad explanation of what makes an Angular 2 component tick
 
 ## What is Angular 2?
 
@@ -286,7 +281,7 @@ Let's work together to add a second component, MasterSword, to our fledgling app
 
 ## Additional Resources
 
--   [`angular-cli`](https://github.com/angular/angular-cli)
+-   [Angular-cli github page](https://github.com/angular/angular-cli)
 -   [Official Angular Documentation](https://github.com/angular/angular-cli)
 
 ## [License](LICENSE)
