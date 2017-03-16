@@ -15,7 +15,7 @@
 By the end of this, developers should be able to:
 
 -   Explain what Angular 2 is and how it differs from Ember
--   Download and install `ng-cli` and scaffold a new ng2 app
+-   Download and install `@angular/cli` and scaffold a new ng2 app
 -   Describe what a component is and why they are useful
 -   Provide a broad explanation of what makes an Angular 2 component tick
 
@@ -30,9 +30,8 @@ Despite the lofty claims of the introduction, all the mainstream front-end frame
 - Component encapsulation
 - Ubiquity
 - Native TypeScript Integration
-- One OR Two Way Databinding
 
-## Install `angular-cli`
+## Install `@angular/cli`
 
 The Angular 2 CLI is literally a copy and paste job of the Ember cli, so you should find this tooling very similar to it
 
