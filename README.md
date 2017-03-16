@@ -198,7 +198,7 @@ Our 'app' component is composed of five files:
 
 Besides the module file, which can be unique to the root component, the Angular 2 dev team wants **all of our components to be a subset of this structure**. Ubiquity is the name of the game.
 
-In **app.component.css**, we will put all of the styles that pertain to our component. These styles **are scope exclusively to their component.** Sick of namespacing your styles to avoid collisions? Angular 2 has you covered.
+In **app.component.css**, we will put all of the styles that pertain to our component. These styles **are scoped exclusively to their component.** Sick of namespacing your styles to avoid collisions? Angular 2 has you covered.
 
 All of our unit tests for the component will live in **app.component.spec.ts**. We won't dive into testing too much, but Angular 2 natively supports the Jasmine testing framework.
 
@@ -301,7 +301,7 @@ Let's give our template some flavor:
 <img src="http://vignette1.wikia.nocookie.net/zelda/images/f/fa/Master_Sword_Artwork_(Skyward_Sword).png/revision/latest">
 ```
 
-Make our stylesheet impicitly-scoped and spicy:
+Make our impicitly-scoped stylesheet spicy:
 
 ```css
 h1 {
